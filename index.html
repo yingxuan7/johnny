@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>Hey Johnny! 👀</title>
 
     <style>
+
         * {
             box-sizing: border-box;
         }
@@ -19,6 +21,10 @@
             overflow-x: hidden;
         }
 
+        /* =========================
+           MAIN LANDING PAGE
+        ========================== */
+
         .hero {
             min-height: 100vh;
             display: flex;
@@ -28,8 +34,6 @@
             position: relative;
             padding: 30px;
         }
-
-        /* Background doodles */
 
         .doodle {
             position: absolute;
@@ -116,7 +120,73 @@
             color: #777;
         }
 
+        /* =========================
+           PERSON PAGE
+        ========================== */
+
+        .person-page {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .person-card {
+            width: 100%;
+            max-width: 650px;
+            background: white;
+            border-radius: 30px;
+            padding: 45px 30px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+
+        .person-icon {
+            font-size: 70px;
+            margin-bottom: 10px;
+        }
+
+        .person-card h1 {
+            font-size: 42px;
+        }
+
+        .message {
+            margin: 30px 0;
+            padding: 25px;
+            background: #fff3f5;
+            border-radius: 20px;
+            font-size: 21px;
+            line-height: 1.6;
+        }
+
+        .song {
+            margin-top: 25px;
+            padding: 20px;
+            background: #f3f0ff;
+            border-radius: 20px;
+        }
+
+        .song-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            color: #555;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hidden {
+            display: none;
+        }
+
         @keyframes wave {
+
             0%, 100% {
                 transform: rotate(0deg);
             }
@@ -128,6 +198,7 @@
             75% {
                 transform: rotate(-12deg);
             }
+
         }
 
         @media (max-width: 600px) {
@@ -147,79 +218,220 @@
             .hand {
                 font-size: 55px;
             }
+
+            .person-card h1 {
+                font-size: 34px;
+            }
+
+            .message {
+                font-size: 18px;
+            }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-    <section class="hero">
 
-        <!-- Little playful decorations -->
-        <div class="doodle one">⭐</div>
-        <div class="doodle two">💥</div>
-        <div class="doodle three">😂</div>
-        <div class="doodle four">✏️</div>
+<!-- =====================================
+     MAIN PAGE
+====================================== -->
 
-        <div class="content">
+<section class="hero" id="homePage">
 
-            <div class="small-text">
-                🚨 IMPORTANT ANNOUNCEMENT 🚨
+    <div class="doodle one">⭐</div>
+    <div class="doodle two">💥</div>
+    <div class="doodle three">😂</div>
+    <div class="doodle four">✏️</div>
+
+
+    <div class="content">
+
+        <div class="small-text">
+            🚨 IMPORTANT ANNOUNCEMENT 🚨
+        </div>
+
+
+        <div class="hand">
+            ✋
+        </div>
+
+
+        <h1>
+            HEY JOHNNY!<br>
+            WAIT!
+        </h1>
+
+
+        <p class="subtitle">
+
+            You thought you could just leave
+            <br>
+
+            without saying goodbye? 👀
+
+        </p>
+
+
+        <a href="#person" class="button">
+
+            What is this? 👀
+
+        </a>
+
+
+        <div class="note">
+
+            Don't worry... it's not a work-related message. 😂
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     PERSON PAGE
+====================================== -->
+
+<section class="person-page hidden" id="personPage">
+
+    <div class="person-card">
+
+        <div class="person-icon">
+            💌
+        </div>
+
+
+        <p>
+            A little message for you...
+        </p>
+
+
+        <h1 id="personName">
+            Someone
+        </h1>
+
+
+        <div class="message" id="personMessage">
+
+            Message coming soon... 👀
+
+        </div>
+
+
+        <div class="song" id="songSection">
+
+            🎵
+
+            <div>
+                My song for you
             </div>
 
-            <div class="hand">
-                ✋
-            </div>
-
-            <h1>
-                HEY JOHNNY!<br>
-                WAIT!
-            </h1>
-
-            <p class="subtitle">
-                You thought you could just leave<br>
-                without saying goodbye? 👀
-            </p>
-
-            <a href="#next" class="button">
-                What is this? 👀
-            </a>
-
-            <div class="note">
-                Don't worry... it's not a work-related message. 😂
+            <div class="song-title" id="songTitle">
+                Song coming soon...
             </div>
 
         </div>
 
-    </section>
+
+        <a href="index.html" class="back-button">
+
+            ← Back to Johnny's page
+
+        </a>
+
+    </div>
+
+</section>
 
 
-    <section id="next" style="
-        min-height: 70vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 40px;
-    ">
 
-        <div>
-            <h2 style="font-size: 38px;">
-                Okay... you caught us. 😌
-            </h2>
+<script>
 
-            <p style="font-size: 20px; line-height: 1.6;">
-                We made a little something for you.
-                <br>
-                But that's all you're getting for now... 👀
-            </p>
+    /* =====================================
+       COLLEAGUE DATA
+       
+       We will replace these later with
+       the real names/messages/songs.
+    ====================================== */
 
-            <p style="font-size: 45px;">
-                💌 📸 🎵
-            </p>
-        </div>
+    const people = {
 
-    </section>
+        person1: {
+            name: "Person 1",
+            message: "Your message will appear here! ❤️",
+            song: "Your song will appear here 🎵"
+        },
+
+        person2: {
+            name: "Person 2",
+            message: "A little message for Johnny! 😂",
+            song: "Song coming soon..."
+        },
+
+        person3: {
+            name: "Person 3",
+            message: "Good luck on your next adventure! ✨",
+            song: "Song coming soon..."
+        }
+
+    };
+
+
+    /* =====================================
+       CHECK WHICH PERSON'S LINK WAS OPENED
+       
+       Example:
+       website.com/?person=person1
+    ====================================== */
+
+    const params = new URLSearchParams(window.location.search);
+
+    const personID = params.get("person");
+
+
+    if (personID && people[personID]) {
+
+        const person = people[personID];
+
+
+        /* Hide main page */
+
+        document.getElementById("homePage")
+            .classList.add("hidden");
+
+
+        /* Show person's page */
+
+        document.getElementById("personPage")
+            .classList.remove("hidden");
+
+
+        /* Insert information */
+
+        document.getElementById("personName")
+            .textContent = person.name;
+
+
+        document.getElementById("personMessage")
+            .textContent = person.message;
+
+
+        document.getElementById("songTitle")
+            .textContent = person.song;
+
+    }
+
+</script>
+
 
 </body>
+
 </html>
