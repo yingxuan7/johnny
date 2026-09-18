@@ -4,6 +4,7 @@
 <head>
 
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Hey Johnny! 👀</title>
@@ -17,16 +18,22 @@
 
 
         body {
+
             margin: 0;
+
             font-family: Arial, sans-serif;
+
             background: #fff9e8;
+
             color: #222;
+
             overflow-x: hidden;
+
         }
 
 
         /* =========================
-           MAIN LANDING PAGE
+           MAIN PAGE
         ========================== */
 
         .hero {
@@ -34,7 +41,9 @@
             min-height: 100vh;
 
             display: flex;
+
             justify-content: center;
+
             align-items: center;
 
             text-align: center;
@@ -60,6 +69,7 @@
         .doodle.one {
 
             top: 10%;
+
             left: 8%;
 
             transform: rotate(-15deg);
@@ -70,6 +80,7 @@
         .doodle.two {
 
             top: 18%;
+
             right: 10%;
 
             transform: rotate(12deg);
@@ -80,6 +91,7 @@
         .doodle.three {
 
             bottom: 15%;
+
             left: 12%;
 
             transform: rotate(10deg);
@@ -90,6 +102,7 @@
         .doodle.four {
 
             bottom: 12%;
+
             right: 12%;
 
             transform: rotate(-12deg);
@@ -233,7 +246,7 @@
 
             text-align: center;
 
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
 
         }
 
@@ -251,12 +264,16 @@
 
             font-size: 42px;
 
+            margin-bottom: 25px;
+
         }
 
 
-        .message {
+        /* MESSAGE */
 
-            margin: 30px 0;
+        .message-box {
+
+            margin: 25px 0;
 
             padding: 25px;
 
@@ -264,18 +281,60 @@
 
             border-radius: 20px;
 
-            font-size: 21px;
+            font-size: 20px;
 
             line-height: 1.6;
 
         }
 
 
-        .song {
+        /* QUOTE */
+
+        .quote-box {
+
+            margin: 25px 0;
+
+            padding: 25px;
+
+            background: #fff8dc;
+
+            border-radius: 20px;
+
+            font-size: 25px;
+
+            font-weight: bold;
+
+            font-style: italic;
+
+            line-height: 1.5;
+
+        }
+
+
+        .quote-label {
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            font-style: normal;
+
+            color: #777;
+
+            margin-bottom: 10px;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        /* SONG */
+
+        .song-box {
 
             margin-top: 25px;
 
-            padding: 20px;
+            padding: 25px;
 
             background: #f3f0ff;
 
@@ -284,13 +343,22 @@
         }
 
 
+        .song-label {
+
+            font-size: 16px;
+
+            margin-bottom: 10px;
+
+        }
+
+
         .song-title {
 
-            font-size: 20px;
+            font-size: 21px;
 
             font-weight: bold;
 
-            margin: 10px 0;
+            margin-bottom: 15px;
 
         }
 
@@ -298,8 +366,6 @@
         .song-button {
 
             display: inline-block;
-
-            margin-top: 15px;
 
             padding: 13px 24px;
 
@@ -327,6 +393,8 @@
         }
 
 
+        /* BACK BUTTON */
+
         .back-button {
 
             display: inline-block;
@@ -342,6 +410,15 @@
         }
 
 
+        .back-button:hover {
+
+            text-decoration: underline;
+
+        }
+
+
+        /* HIDDEN */
+
         .hidden {
 
             display: none;
@@ -349,10 +426,7 @@
         }
 
 
-
-        /* =========================
-           ANIMATION
-        ========================== */
+        /* ANIMATION */
 
         @keyframes wave {
 
@@ -362,13 +436,11 @@
 
             }
 
-
             25% {
 
                 transform: rotate(18deg);
 
             }
-
 
             75% {
 
@@ -379,10 +451,7 @@
         }
 
 
-
-        /* =========================
-           MOBILE
-        ========================== */
+        /* MOBILE */
 
         @media (max-width: 600px) {
 
@@ -421,9 +490,16 @@
             }
 
 
-            .message {
+            .message-box {
 
                 font-size: 18px;
+
+            }
+
+
+            .quote-box {
+
+                font-size: 21px;
 
             }
 
@@ -434,34 +510,41 @@
 </head>
 
 
-
 <body>
 
 
 <!-- =====================================
-     MAIN JOHNNY PAGE
+     JOHNNY MAIN PAGE
 ====================================== -->
 
 <section class="hero" id="homePage">
 
 
     <div class="doodle one">
+
         ⭐
+
     </div>
 
 
     <div class="doodle two">
+
         💥
+
     </div>
 
 
     <div class="doodle three">
+
         😂
+
     </div>
 
 
     <div class="doodle four">
+
         ✏️
+
     </div>
 
 
@@ -476,13 +559,11 @@
         </div>
 
 
-
         <div class="hand">
 
             ✋
 
         </div>
-
 
 
         <h1>
@@ -492,7 +573,6 @@
             WAIT!
 
         </h1>
-
 
 
         <p class="subtitle">
@@ -506,13 +586,11 @@
         </p>
 
 
-
         <a href="#person" class="button">
 
             What is this? 👀
 
         </a>
-
 
 
         <div class="note">
@@ -545,13 +623,11 @@
         </div>
 
 
-
         <p>
 
             A little message for you...
 
         </p>
-
 
 
         <h1 id="personName">
@@ -562,9 +638,34 @@
 
 
 
-        <div class="message" id="personMessage">
+        <!-- MESSAGE -->
 
-            Message coming soon... 👀
+        <div
+            class="message-box hidden"
+            id="messageBox"
+        >
+
+            <div id="personMessage"></div>
+
+        </div>
+
+
+
+        <!-- QUOTE -->
+
+        <div
+            class="quote-box hidden"
+            id="quoteBox"
+        >
+
+            <div class="quote-label">
+
+                💬 A LITTLE QUOTE
+
+            </div>
+
+
+            <div id="personQuote"></div>
 
         </div>
 
@@ -572,26 +673,24 @@
 
         <!-- SONG -->
 
-        <div class="song" id="songSection">
+        <div
+            class="song-box hidden"
+            id="songBox"
+        >
 
+            <div class="song-label">
 
-            🎵
-
-
-            <div>
-
-                My song for you
-
-            </div>
-
-
-
-            <div class="song-title" id="songTitle">
-
-                Song coming soon...
+                🎵 A SONG FOR YOU
 
             </div>
 
+
+            <div
+                class="song-title"
+                id="songTitle"
+            >
+
+            </div>
 
 
             <a
@@ -605,12 +704,14 @@
 
             </a>
 
-
         </div>
 
 
 
-        <a href="index.html" class="back-button">
+        <a
+            href="index.html"
+            class="back-button"
+        >
 
             ← Back to Johnny's page
 
@@ -629,13 +730,15 @@
     /* =====================================
        COLLEAGUE DATA
 
-       Add more people here later.
-
        Each person can have:
-       - name
-       - message
-       - song
-       - songLink
+
+       message
+       quote
+       song
+       songLink
+
+       Leave something as "" if they
+       don't have it.
     ====================================== */
 
 
@@ -643,34 +746,40 @@
 
 
         /* =========================
+           PERSON 1
            PHILBERT
         ========================== */
 
         person1: {
 
-            name: "Philbert",
+            name: "Your Love Pig Dom 🐷",
 
-            message: "chiikawa! ❤️",
+            message: "",
 
-            song: "chiikawa",
+            quote: "I’ll always love you",
+
+            song: "Beautiful in White by Westlife",
 
             songLink:
-                "https://www.youtube.com/watch?v=4lN3fJcPgjU&list=RD4lN3fJcPgjU&start_radio=1"
+                "https://www.youtube.com/watch?v=XRuDQ6aYeD0&list=RDXRuDQ6aYeD0&start_radio=1"
 
         },
 
 
         /* =========================
            PERSON 2
+           LEE SHIN
         ========================== */
 
         person2: {
 
-            name: "Person 2",
+            name: "Lee Shin",
 
-            message: "A little message for Johnny! 😂",
+            message: "All the best Johnny! [Happy]",
 
-            song: "Song coming soon...",
+            quote: "",
+
+            song: "",
 
             songLink: ""
 
@@ -679,17 +788,65 @@
 
         /* =========================
            PERSON 3
+           MARIE
         ========================== */
 
         person3: {
 
-            name: "Person 3",
+            name: "Marie",
 
-            message: "Good luck on your next adventure! ✨",
+            message:
+                "Wishing you a smooth transition and great success in your new job!",
 
-            song: "Song coming soon...",
+            quote: "",
+
+            song: "",
 
             songLink: ""
+
+        },
+
+
+        /* =========================
+           PERSON 4
+           BRANDON
+        ========================== */
+
+        person4: {
+
+            name: "Brandon",
+
+            message:
+                "All the best for your future! Thank you for giving me the opportunity for my first job. Wishing you success in your next chapter!",
+
+            quote: "",
+
+            song: "See You Again",
+
+            songLink:
+                "https://youtu.be/RgKAFK5djSk?si=toFEuWRGpd3B0hPL"
+
+        },
+
+
+        /* =========================
+           PERSON 5
+           JANICE
+        ========================== */
+
+        person5: {
+
+            name: "Janice",
+
+            message:
+                "Thanks a lot for your guidance and support during my time here. Wishing you all the best in your next chapter — may it be your best one yet! 😊",
+
+            quote: "",
+
+            song: "Good Life",
+
+            songLink:
+                "https://www.youtube.com/watch?v=jZhQOvvV45w&list=RDjZhQOvvV45w&start_radio=1"
 
         }
 
@@ -708,7 +865,9 @@
 
 
     const params =
-        new URLSearchParams(window.location.search);
+        new URLSearchParams(
+            window.location.search
+        );
 
 
     const personID =
@@ -721,7 +880,10 @@
     ====================================== */
 
 
-    if (personID && people[personID]) {
+    if (
+        personID &&
+        people[personID]
+    ) {
 
 
         const person =
@@ -729,7 +891,7 @@
 
 
 
-        /* Hide main page */
+        /* Hide homepage */
 
         document
             .getElementById("homePage")
@@ -738,7 +900,7 @@
 
 
 
-        /* Show person page */
+        /* Show person's page */
 
         document
             .getElementById("personPage")
@@ -747,7 +909,7 @@
 
 
 
-        /* Person name */
+        /* Name */
 
         document
             .getElementById("personName")
@@ -756,52 +918,82 @@
 
 
 
-        /* Message */
+        /* =========================
+           MESSAGE
+        ========================== */
 
-        document
-            .getElementById("personMessage")
-            .textContent =
-            person.message;
+        const messageBox =
+            document.getElementById("messageBox");
+
+
+        if (person.message) {
+
+            messageBox
+                .classList
+                .remove("hidden");
+
+            document
+                .getElementById("personMessage")
+                .textContent =
+                person.message;
+
+        }
 
 
 
-        /* Song title */
+        /* =========================
+           QUOTE
+        ========================== */
 
-        if (person.song) {
+        const quoteBox =
+            document.getElementById("quoteBox");
+
+
+        if (person.quote) {
+
+            quoteBox
+                .classList
+                .remove("hidden");
+
+            document
+                .getElementById("personQuote")
+                .textContent =
+                person.quote;
+
+        }
+
+
+
+        /* =========================
+           SONG
+        ========================== */
+
+        const songBox =
+            document.getElementById("songBox");
+
+
+        if (
+            person.song &&
+            person.songLink
+        ) {
+
+            songBox
+                .classList
+                .remove("hidden");
+
 
             document
                 .getElementById("songTitle")
                 .textContent =
                 person.song;
 
-        }
 
-
-
-        /* Song link */
-
-        const songLink =
-            document.getElementById("songLink");
-
-
-
-        if (person.songLink) {
-
-
-            songLink.href =
+            document
+                .getElementById("songLink")
+                .href =
                 person.songLink;
 
-
-        } else {
-
-
-            songLink.style.display =
-                "none";
-
-
         }
-
-
 
     }
 
@@ -811,4 +1003,3 @@
 </body>
 
 </html>
-
