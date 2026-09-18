@@ -3,16 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Before You Go ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            background: #fff8f5;
+            color: #4a3a36;
+            text-align: center;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            background: linear-gradient(
+                180deg,
+                #ffeef0 0%,
+                #fff8f5 100%
+            );
+        }
+
+        .heart {
+            font-size: 60px;
+            margin-bottom: 15px;
+            animation: float 2s ease-in-out infinite;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin: 10px 0;
+            font-weight: normal;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: #806c66;
+            margin: 10px 0;
+        }
+
+        .intro {
+            max-width: 600px;
+            line-height: 1.8;
+            font-size: 17px;
+            margin-top: 25px;
+        }
+
+        .button {
+            margin-top: 35px;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 30px;
+            background: #d98f9b;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            opacity: 0.9;
+        }
+
+        .section {
+            padding: 70px 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .section h2 {
+            font-size: 32px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            margin: 20px auto;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            line-height: 1.8;
+        }
+
+        footer {
+            padding: 40px 20px;
+            font-size: 14px;
+            color: #8d7770;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Before You Go... ❤️</h1>
+    <section class="hero">
 
-    <p>A little something from all of us.</p>
+        <div class="heart">❤️</div>
 
-    <p>This is our digital farewell book.</p>
+        <h1>Before You Go...</h1>
+
+        <p class="subtitle">
+            A little something from all of us.
+        </p>
+
+        <p class="intro">
+            Some people come into our lives for a short time,
+            but somehow leave behind memories that stay much longer.
+            <br><br>
+            This is our little digital farewell book for you.
+        </p>
+
+        <a href="#messages" class="button">
+            Open Your Farewell Book
+        </a>
+
+    </section>
+
+
+    <section class="section" id="messages">
+
+        <h2>A Few Words For You 💌</h2>
+
+        <div class="card">
+            <p>
+                Thank you for being part of our journey.
+                The office won't quite feel the same without you.
+            </p>
+
+            <p>
+                We hope your next chapter brings you
+                lots of happiness, success and wonderful memories.
+            </p>
+
+            <p>
+                Good luck on your new adventure! ❤️
+            </p>
+        </div>
+
+    </section>
+
+
+    <footer>
+        Made with ❤️ by all of us
+    </footer>
 
 </body>
 </html>
