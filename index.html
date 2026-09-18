@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -226,5 +225,590 @@
 
             max-width: 650px;
 
-            back
-```
+            background: white;
+
+            border-radius: 30px;
+
+            padding: 45px 30px;
+
+            text-align: center;
+
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+
+        }
+
+
+        .person-icon {
+
+            font-size: 70px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .person-card h1 {
+
+            font-size: 42px;
+
+        }
+
+
+        .message {
+
+            margin: 30px 0;
+
+            padding: 25px;
+
+            background: #fff3f5;
+
+            border-radius: 20px;
+
+            font-size: 21px;
+
+            line-height: 1.6;
+
+        }
+
+
+        .song {
+
+            margin-top: 25px;
+
+            padding: 20px;
+
+            background: #f3f0ff;
+
+            border-radius: 20px;
+
+        }
+
+
+        .song-title {
+
+            font-size: 20px;
+
+            font-weight: bold;
+
+            margin: 10px 0;
+
+        }
+
+
+        .song-button {
+
+            display: inline-block;
+
+            margin-top: 15px;
+
+            padding: 13px 24px;
+
+            background: #222;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 50px;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            transition: transform 0.2s;
+
+        }
+
+
+        .song-button:hover {
+
+            transform: scale(1.06);
+
+        }
+
+
+        .back-button {
+
+            display: inline-block;
+
+            margin-top: 30px;
+
+            color: #555;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+        }
+
+
+        .hidden {
+
+            display: none;
+
+        }
+
+
+
+        /* =========================
+           ANIMATION
+        ========================== */
+
+        @keyframes wave {
+
+            0%, 100% {
+
+                transform: rotate(0deg);
+
+            }
+
+
+            25% {
+
+                transform: rotate(18deg);
+
+            }
+
+
+            75% {
+
+                transform: rotate(-12deg);
+
+            }
+
+        }
+
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 600px) {
+
+            h1 {
+
+                font-size: 42px;
+
+            }
+
+
+            .subtitle {
+
+                font-size: 18px;
+
+            }
+
+
+            .doodle {
+
+                font-size: 32px;
+
+            }
+
+
+            .hand {
+
+                font-size: 55px;
+
+            }
+
+
+            .person-card h1 {
+
+                font-size: 34px;
+
+            }
+
+
+            .message {
+
+                font-size: 18px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+<!-- =====================================
+     MAIN JOHNNY PAGE
+====================================== -->
+
+<section class="hero" id="homePage">
+
+
+    <div class="doodle one">
+        ⭐
+    </div>
+
+
+    <div class="doodle two">
+        💥
+    </div>
+
+
+    <div class="doodle three">
+        😂
+    </div>
+
+
+    <div class="doodle four">
+        ✏️
+    </div>
+
+
+
+    <div class="content">
+
+
+        <div class="small-text">
+
+            🚨 IMPORTANT ANNOUNCEMENT 🚨
+
+        </div>
+
+
+
+        <div class="hand">
+
+            ✋
+
+        </div>
+
+
+
+        <h1>
+
+            HEY JOHNNY!<br>
+
+            WAIT!
+
+        </h1>
+
+
+
+        <p class="subtitle">
+
+            You thought you could just leave
+
+            <br>
+
+            without saying goodbye? 👀
+
+        </p>
+
+
+
+        <a href="#person" class="button">
+
+            What is this? 👀
+
+        </a>
+
+
+
+        <div class="note">
+
+            Don't worry... it's not a work-related message. 😂
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     PERSON PAGE
+====================================== -->
+
+<section class="person-page hidden" id="personPage">
+
+
+    <div class="person-card">
+
+
+        <div class="person-icon">
+
+            💌
+
+        </div>
+
+
+
+        <p>
+
+            A little message for you...
+
+        </p>
+
+
+
+        <h1 id="personName">
+
+            Someone
+
+        </h1>
+
+
+
+        <div class="message" id="personMessage">
+
+            Message coming soon... 👀
+
+        </div>
+
+
+
+        <!-- SONG -->
+
+        <div class="song" id="songSection">
+
+
+            🎵
+
+
+            <div>
+
+                My song for you
+
+            </div>
+
+
+
+            <div class="song-title" id="songTitle">
+
+                Song coming soon...
+
+            </div>
+
+
+
+            <a
+                id="songLink"
+                href="#"
+                target="_blank"
+                class="song-button"
+            >
+
+                ▶ Listen on YouTube
+
+            </a>
+
+
+        </div>
+
+
+
+        <a href="index.html" class="back-button">
+
+            ← Back to Johnny's page
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<script>
+
+
+    /* =====================================
+       COLLEAGUE DATA
+
+       Add more people here later.
+
+       Each person can have:
+       - name
+       - message
+       - song
+       - songLink
+    ====================================== */
+
+
+    const people = {
+
+
+        /* =========================
+           PHILBERT
+        ========================== */
+
+        person1: {
+
+            name: "Philbert",
+
+            message: "chiikawa! ❤️",
+
+            song: "chiikawa",
+
+            songLink:
+                "https://www.youtube.com/watch?v=4lN3fJcPgjU&list=RD4lN3fJcPgjU&start_radio=1"
+
+        },
+
+
+        /* =========================
+           PERSON 2
+        ========================== */
+
+        person2: {
+
+            name: "Person 2",
+
+            message: "A little message for Johnny! 😂",
+
+            song: "Song coming soon...",
+
+            songLink: ""
+
+        },
+
+
+        /* =========================
+           PERSON 3
+        ========================== */
+
+        person3: {
+
+            name: "Person 3",
+
+            message: "Good luck on your next adventure! ✨",
+
+            song: "Song coming soon...",
+
+            songLink: ""
+
+        }
+
+
+    };
+
+
+
+    /* =====================================
+       READ PERSON FROM URL
+
+       Example:
+
+       ?person=person1
+    ====================================== */
+
+
+    const params =
+        new URLSearchParams(window.location.search);
+
+
+    const personID =
+        params.get("person");
+
+
+
+    /* =====================================
+       SHOW PERSON PAGE
+    ====================================== */
+
+
+    if (personID && people[personID]) {
+
+
+        const person =
+            people[personID];
+
+
+
+        /* Hide main page */
+
+        document
+            .getElementById("homePage")
+            .classList
+            .add("hidden");
+
+
+
+        /* Show person page */
+
+        document
+            .getElementById("personPage")
+            .classList
+            .remove("hidden");
+
+
+
+        /* Person name */
+
+        document
+            .getElementById("personName")
+            .textContent =
+            person.name;
+
+
+
+        /* Message */
+
+        document
+            .getElementById("personMessage")
+            .textContent =
+            person.message;
+
+
+
+        /* Song title */
+
+        if (person.song) {
+
+            document
+                .getElementById("songTitle")
+                .textContent =
+                person.song;
+
+        }
+
+
+
+        /* Song link */
+
+        const songLink =
+            document.getElementById("songLink");
+
+
+
+        if (person.songLink) {
+
+
+            songLink.href =
+                person.songLink;
+
+
+        } else {
+
+
+            songLink.style.display =
+                "none";
+
+
+        }
+
+
+
+    }
+
+</script>
+
+
+</body>
+
+</html>
+
