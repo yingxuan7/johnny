@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Hey Johnny! 👀</title>
-
+    <title>Before You Go ❤️</title>
 
     <style>
 
@@ -16,990 +12,824 @@
             box-sizing: border-box;
         }
 
-
         body {
-
             margin: 0;
-
-            font-family: Arial, sans-serif;
-
-            background: #fff9e8;
-
-            color: #222;
-
+            padding: 0;
+            background: #fff8ed;
+            color: #333;
+            font-family: "Trebuchet MS", Arial, sans-serif;
             overflow-x: hidden;
-
         }
-
 
         /* =========================
-           MAIN PAGE
-        ========================== */
-
-        .hero {
-
-            min-height: 100vh;
-
-            display: flex;
-
-            justify-content: center;
-
-            align-items: center;
-
-            text-align: center;
-
-            position: relative;
-
-            padding: 30px;
-
-        }
-
-
-        .doodle {
-
-            position: absolute;
-
-            font-size: 45px;
-
-            user-select: none;
-
-        }
-
-
-        .doodle.one {
-
-            top: 10%;
-
-            left: 8%;
-
-            transform: rotate(-15deg);
-
-        }
-
-
-        .doodle.two {
-
-            top: 18%;
-
-            right: 10%;
-
-            transform: rotate(12deg);
-
-        }
-
-
-        .doodle.three {
-
-            bottom: 15%;
-
-            left: 12%;
-
-            transform: rotate(10deg);
-
-        }
-
-
-        .doodle.four {
-
-            bottom: 12%;
-
-            right: 12%;
-
-            transform: rotate(-12deg);
-
-        }
-
-
-        .content {
-
-            max-width: 700px;
-
-            position: relative;
-
-            z-index: 2;
-
-        }
-
-
-        .small-text {
-
-            font-size: 18px;
-
-            font-weight: bold;
-
-            letter-spacing: 2px;
-
-            margin-bottom: 15px;
-
-        }
-
-
-        h1 {
-
-            font-size: 58px;
-
-            line-height: 1.05;
-
-            margin: 10px 0;
-
-            font-weight: 900;
-
-        }
-
-
-        .hand {
-
-            font-size: 70px;
-
-            display: inline-block;
-
-            animation: wave 1.2s infinite;
-
-        }
-
-
-        .subtitle {
-
-            font-size: 22px;
-
-            margin-top: 25px;
-
-            line-height: 1.5;
-
-        }
-
-
-        .button {
-
-            display: inline-block;
-
-            margin-top: 35px;
-
-            padding: 16px 32px;
-
-            background: #222;
-
-            color: white;
-
-            text-decoration: none;
-
-            border-radius: 50px;
-
-            font-size: 18px;
-
-            font-weight: bold;
-
-            transition: transform 0.2s;
-
-        }
-
-
-        .button:hover {
-
-            transform: scale(1.08) rotate(-2deg);
-
-        }
-
-
-        .note {
-
-            margin-top: 20px;
-
-            font-size: 14px;
-
-            color: #777;
-
-        }
-
-
-
-        /* =========================
-           PERSON PAGE
-        ========================== */
-
-        .person-page {
-
-            min-height: 100vh;
-
-            display: flex;
-
-            justify-content: center;
-
-            align-items: center;
-
-            padding: 40px 20px;
-
-        }
-
-
-        .person-card {
-
-            width: 100%;
-
-            max-width: 650px;
-
-            background: white;
-
-            border-radius: 30px;
-
-            padding: 45px 30px;
-
-            text-align: center;
-
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-
-        }
-
-
-        .person-icon {
-
-            font-size: 70px;
-
-            margin-bottom: 10px;
-
-        }
-
-
-        .person-card h1 {
-
-            font-size: 42px;
-
-            margin-bottom: 25px;
-
-        }
-
-
-        /* MESSAGE */
-
-        .message-box {
-
-            margin: 25px 0;
-
-            padding: 25px;
-
-            background: #fff3f5;
-
-            border-radius: 20px;
-
-            font-size: 20px;
-
-            line-height: 1.6;
-
-        }
-
-
-        /* QUOTE */
-
-        .quote-box {
-
-            margin: 25px 0;
-
-            padding: 25px;
-
-            background: #fff8dc;
-
-            border-radius: 20px;
-
-            font-size: 25px;
-
-            font-weight: bold;
-
-            font-style: italic;
-
-            line-height: 1.5;
-
-        }
-
-
-        .quote-label {
-
-            font-size: 14px;
-
-            font-weight: bold;
-
-            font-style: normal;
-
-            color: #777;
-
-            margin-bottom: 10px;
-
-            letter-spacing: 1px;
-
-        }
-
-
-        /* SONG */
-
-        .song-box {
-
-            margin-top: 25px;
-
-            padding: 25px;
-
-            background: #f3f0ff;
-
-            border-radius: 20px;
-
-        }
-
-
-        .song-label {
-
-            font-size: 16px;
-
-            margin-bottom: 10px;
-
-        }
-
-
-        .song-title {
-
-            font-size: 21px;
-
-            font-weight: bold;
-
-            margin-bottom: 15px;
-
-        }
-
-
-        .song-button {
-
-            display: inline-block;
-
-            padding: 13px 24px;
-
-            background: #222;
-
-            color: white;
-
-            text-decoration: none;
-
-            border-radius: 50px;
-
-            font-size: 16px;
-
-            font-weight: bold;
-
-            transition: transform 0.2s;
-
-        }
-
-
-        .song-button:hover {
-
-            transform: scale(1.06);
-
-        }
-
-
-        /* BACK BUTTON */
-
-        .back-button {
-
-            display: inline-block;
-
-            margin-top: 30px;
-
-            color: #555;
-
-            text-decoration: none;
-
-            font-weight: bold;
-
-        }
-
-
-        .back-button:hover {
-
-            text-decoration: underline;
-
-        }
-
-
-        /* HIDDEN */
+           GENERAL
+        ========================= */
 
         .hidden {
-
-            display: none;
-
+            display: none !important;
         }
 
+        .page {
+            min-height: 100vh;
+            position: relative;
+            padding: 40px 20px;
+        }
 
-        /* ANIMATION */
+        .container {
+            width: 100%;
+            max-width: 760px;
+            margin: auto;
+            text-align: center;
+        }
+
+        /* =========================
+           DOODLES
+        ========================= */
+
+        .doodle {
+            position: absolute;
+            font-size: 35px;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .doodle.star1 {
+            top: 50px;
+            left: 8%;
+            transform: rotate(-15deg);
+        }
+
+        .doodle.star2 {
+            top: 130px;
+            right: 8%;
+            transform: rotate(20deg);
+        }
+
+        .doodle.heart1 {
+            bottom: 100px;
+            left: 7%;
+            transform: rotate(-15deg);
+        }
+
+        .doodle.heart2 {
+            bottom: 170px;
+            right: 8%;
+            transform: rotate(15deg);
+        }
+
+        .doodle.pencil {
+            bottom: 40px;
+            right: 18%;
+            transform: rotate(-25deg);
+        }
+
+        /* =========================
+           HOME PAGE
+        ========================= */
+
+        .announcement {
+            display: inline-block;
+            background: #ffdf3d;
+            border: 3px solid #222;
+            padding: 10px 18px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 14px;
+            box-shadow: 4px 4px 0 #222;
+            transform: rotate(-2deg);
+            margin-bottom: 25px;
+        }
+
+        .hand {
+            font-size: 65px;
+            display: block;
+            margin-bottom: 10px;
+            animation: wave 1.5s infinite;
+        }
 
         @keyframes wave {
 
             0%, 100% {
-
                 transform: rotate(0deg);
-
             }
 
             25% {
+                transform: rotate(12deg);
+            }
 
-                transform: rotate(18deg);
-
+            50% {
+                transform: rotate(-8deg);
             }
 
             75% {
-
-                transform: rotate(-12deg);
-
+                transform: rotate(12deg);
             }
-
         }
 
+        h1 {
+            font-size: clamp(40px, 9vw, 72px);
+            line-height: 0.95;
+            margin: 10px 0 20px;
+            color: #222;
+            letter-spacing: -2px;
+        }
 
-        /* MOBILE */
+        .subtitle {
+            font-size: 20px;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 35px;
+            padding: 16px 28px;
+            background: #ff6f91;
+            color: white;
+            text-decoration: none;
+            border: 3px solid #222;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 5px 5px 0 #222;
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            transform: translate(3px, 3px);
+            box-shadow: 2px 2px 0 #222;
+        }
+
+        .note {
+            margin: 55px auto 0;
+            max-width: 500px;
+            background: #fff;
+            padding: 22px;
+            border: 3px solid #222;
+            border-radius: 15px;
+            box-shadow: 6px 6px 0 #222;
+            transform: rotate(1deg);
+            font-size: 16px;
+        }
+
+        .note strong {
+            font-size: 20px;
+        }
+
+        /* =========================
+           PERSON PAGE
+        ========================= */
+
+        .person-page {
+            min-height: 100vh;
+            padding: 35px 18px 60px;
+        }
+
+        .person-container {
+            width: 100%;
+            max-width: 680px;
+            margin: auto;
+        }
+
+        .found-label {
+            text-align: center;
+            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: 15px;
+            display: inline-block;
+            background: #ffdf3d;
+            padding: 9px 15px;
+            border: 3px solid #222;
+            border-radius: 12px;
+            box-shadow: 4px 4px 0 #222;
+            transform: rotate(-2deg);
+        }
+
+        .person-card {
+            background: #fff;
+            border: 4px solid #222;
+            border-radius: 20px;
+            padding: 35px 25px 40px;
+            box-shadow: 8px 8px 0 #222;
+            position: relative;
+        }
+
+        .person-icon {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            background: #ffd9e4;
+            border: 3px solid #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 45px;
+        }
+
+        .little-title {
+            font-size: 17px;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        .person-card h2 {
+            font-size: clamp(30px, 7vw, 48px);
+            margin: 0 0 25px;
+            line-height: 1.05;
+            color: #222;
+        }
+
+        /* =========================
+           MESSAGE
+        ========================= */
+
+        .message-box {
+            background: #fff5a8;
+            border: 3px solid #222;
+            border-radius: 15px;
+            padding: 22px;
+            margin-top: 25px;
+            text-align: left;
+            box-shadow: 5px 5px 0 #222;
+            transform: rotate(-1deg);
+        }
+
+        .box-label {
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .message-text {
+            font-size: 18px;
+            line-height: 1.65;
+        }
+
+        /* =========================
+           QUOTE
+        ========================= */
+
+        .quote-box {
+            background: #ffe1eb;
+            border: 3px solid #222;
+            border-radius: 15px;
+            padding: 25px 20px;
+            margin-top: 30px;
+            box-shadow: 5px 5px 0 #222;
+            transform: rotate(1deg);
+        }
+
+        .quote-mark {
+            font-size: 45px;
+            line-height: 0.5;
+        }
+
+        .quote-text {
+            font-size: 21px;
+            font-weight: bold;
+            font-style: italic;
+            line-height: 1.5;
+            margin-top: 12px;
+        }
+
+        /* =========================
+           SONG
+        ========================= */
+
+        .song-box {
+            background: #dff3ff;
+            border: 3px solid #222;
+            border-radius: 15px;
+            padding: 22px;
+            margin-top: 30px;
+            box-shadow: 5px 5px 0 #222;
+            text-align: center;
+            transform: rotate(-1deg);
+        }
+
+        .song-icon {
+            font-size: 40px;
+            margin-bottom: 8px;
+        }
+
+        .song-label {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .song-title {
+            font-size: 21px;
+            font-weight: bold;
+            margin: 8px 0 18px;
+        }
+
+        .song-button {
+            display: inline-block;
+            padding: 12px 20px;
+            background: #222;
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .song-button:hover {
+            transform: scale(1.05);
+        }
+
+        /* =========================
+           END MESSAGE
+        ========================= */
+
+        .final-heart {
+            font-size: 42px;
+            margin-top: 35px;
+        }
+
+        .final-text {
+            font-size: 15px;
+            color: #666;
+            margin-top: 8px;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           BACK BUTTON
+        ========================= */
+
+        .back-button {
+            display: block;
+            width: fit-content;
+            margin: 35px auto 0;
+            color: #222;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 2px solid #222;
+            padding-bottom: 3px;
+        }
+
+        .back-button:hover {
+            color: #ff5c85;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 600px) {
 
-            h1 {
-
-                font-size: 42px;
-
+            .page {
+                padding: 30px 16px;
             }
-
-
-            .subtitle {
-
-                font-size: 18px;
-
-            }
-
 
             .doodle {
-
-                font-size: 32px;
-
+                font-size: 26px;
             }
 
-
-            .hand {
-
-                font-size: 55px;
-
+            .announcement {
+                font-size: 12px;
             }
 
-
-            .person-card h1 {
-
-                font-size: 34px;
-
+            .subtitle {
+                font-size: 17px;
             }
 
+            .note {
+                font-size: 14px;
+            }
 
-            .message-box {
+            .person-card {
+                padding: 30px 18px 35px;
+            }
 
+            .message-text {
+                font-size: 16px;
+            }
+
+            .quote-text {
                 font-size: 18px;
-
             }
 
-
-            .quote-box {
-
-                font-size: 21px;
-
+            .song-title {
+                font-size: 18px;
             }
-
         }
 
     </style>
-
 </head>
 
 
 <body>
 
+    <!-- ==================================================
+         HOME PAGE
+    ================================================== -->
 
-<!-- =====================================
-     JOHNNY MAIN PAGE
-====================================== -->
+    <div id="homePage" class="page">
 
-<section class="hero" id="homePage">
+        <div class="doodle star1">⭐</div>
+        <div class="doodle star2">💥</div>
+        <div class="doodle heart1">❤️</div>
+        <div class="doodle heart2">✨</div>
+        <div class="doodle pencil">✏️</div>
 
+        <div class="container">
 
-    <div class="doodle one">
+            <div class="announcement">
+                🚨 IMPORTANT ANNOUNCEMENT 🚨
+            </div>
 
-        ⭐
+            <span class="hand">✋</span>
+
+            <h1>
+                HEY JOHNNY!<br>
+                WAIT!
+            </h1>
+
+            <div class="subtitle">
+                You thought you could just leave without
+                saying goodbye? 👀
+            </div>
+
+            <a href="#secret" class="button">
+                What is this? 👀
+            </a>
+
+            <div id="secret" class="note">
+
+                <strong>
+                    Don't worry...
+                </strong>
+
+                <br><br>
+
+                It's not a work-related message. 😂
+
+                <br><br>
+
+                A few people have prepared
+                <strong>little surprises</strong>
+                for you.
+
+                <br><br>
+
+                You might want to check
+                the QR codes / NFC tags
+                you've received. 👀
+
+            </div>
+
+        </div>
 
     </div>
 
 
-    <div class="doodle two">
+    <!-- ==================================================
+         PERSON PAGE
+    ================================================== -->
 
-        💥
+    <div id="personPage" class="person-page hidden">
 
-    </div>
+        <div class="doodle star1">⭐</div>
+        <div class="doodle star2">✨</div>
+        <div class="doodle heart1">❤️</div>
+        <div class="doodle heart2">💥</div>
 
+        <div class="person-container">
 
-    <div class="doodle three">
+            <div style="text-align:center;">
 
-        😂
-
-    </div>
-
-
-    <div class="doodle four">
-
-        ✏️
-
-    </div>
-
-
-
-    <div class="content">
-
-
-        <div class="small-text">
-
-            🚨 IMPORTANT ANNOUNCEMENT 🚨
-
-        </div>
-
-
-        <div class="hand">
-
-            ✋
-
-        </div>
-
-
-        <h1>
-
-            HEY JOHNNY!<br>
-
-            WAIT!
-
-        </h1>
-
-
-        <p class="subtitle">
-
-            You thought you could just leave
-
-            <br>
-
-            without saying goodbye? 👀
-
-        </p>
-
-
-        <a href="#person" class="button">
-
-            What is this? 👀
-
-        </a>
-
-
-        <div class="note">
-
-            Don't worry... it's not a work-related message. 😂
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================
-     PERSON PAGE
-====================================== -->
-
-<section class="person-page hidden" id="personPage">
-
-
-    <div class="person-card">
-
-
-        <div class="person-icon">
-
-            💌
-
-        </div>
-
-
-        <p>
-
-            A little message for you...
-
-        </p>
-
-
-        <h1 id="personName">
-
-            Someone
-
-        </h1>
-
-
-
-        <!-- MESSAGE -->
-
-        <div
-            class="message-box hidden"
-            id="messageBox"
-        >
-
-            <div id="personMessage"></div>
-
-        </div>
-
-
-
-        <!-- QUOTE -->
-
-        <div
-            class="quote-box hidden"
-            id="quoteBox"
-        >
-
-            <div class="quote-label">
-
-                💬 A LITTLE QUOTE
+                <div class="found-label">
+                    🚨 JOHNNY! YOU FOUND ONE! 🚨
+                </div>
 
             </div>
 
 
-            <div id="personQuote"></div>
+            <div class="person-card">
 
-        </div>
+                <div class="person-icon" id="personIcon">
+                    💌
+                </div>
 
+                <div class="little-title">
+                    A little message from
+                </div>
 
-
-        <!-- SONG -->
-
-        <div
-            class="song-box hidden"
-            id="songBox"
-        >
-
-            <div class="song-label">
-
-                🎵 A SONG FOR YOU
-
-            </div>
+                <h2 id="personName">
+                    Someone
+                </h2>
 
 
-            <div
-                class="song-title"
-                id="songTitle"
-            >
+                <!-- MESSAGE -->
+
+                <div
+                    id="messageBox"
+                    class="message-box hidden"
+                >
+
+                    <div class="box-label">
+                        💬 A MESSAGE FOR YOU
+                    </div>
+
+                    <div
+                        id="personMessage"
+                        class="message-text"
+                    ></div>
+
+                </div>
+
+
+                <!-- QUOTE -->
+
+                <div
+                    id="quoteBox"
+                    class="quote-box hidden"
+                >
+
+                    <div class="quote-mark">
+                        “
+                    </div>
+
+                    <div
+                        id="personQuote"
+                        class="quote-text"
+                    ></div>
+
+                    <div
+                        style="
+                        text-align:right;
+                        font-size:40px;
+                        line-height:0.5;
+                        "
+                    >
+                        ”
+                    </div>
+
+                </div>
+
+
+                <!-- SONG -->
+
+                <div
+                    id="songBox"
+                    class="song-box hidden"
+                >
+
+                    <div class="song-icon">
+                        🎵
+                    </div>
+
+                    <div class="song-label">
+                        A SONG FOR YOU
+                    </div>
+
+                    <div
+                        id="songTitle"
+                        class="song-title"
+                    ></div>
+
+                    <a
+                        id="songLink"
+                        class="song-button"
+                        href="#"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        ▶ Listen on YouTube
+                    </a>
+
+                </div>
+
+
+                <div class="final-heart">
+                    ❤️
+                </div>
+
+                <div class="final-text">
+                    One small message from someone
+                    who shared a little part of your journey.
+                    <br>
+                    All the best for your next chapter! ✨
+                </div>
 
             </div>
 
 
             <a
-                id="songLink"
-                href="#"
-                target="_blank"
-                class="song-button"
+                href="index.html"
+                class="back-button"
             >
-
-                ▶ Listen on YouTube
-
+                ← Back to Johnny's page
             </a>
 
         </div>
 
-
-
-        <a
-            href="index.html"
-            class="back-button"
-        >
-
-            ← Back to Johnny's page
-
-        </a>
-
-
     </div>
 
-</section>
+
+    <!-- ==================================================
+         DATA + JAVASCRIPT
+    ================================================== -->
+
+    <script>
+
+        const people = {
+
+            person1: {
+                name: "Your Love Pig Dom 🐷",
+                icon: "🐷",
+                message: "",
+                quote: "I’ll always love you",
+                song: "Beautiful in White by Westlife",
+                songLink:
+                    "https://www.youtube.com/watch?v=XRuDQ6aYeD0&list=RDXRuDQ6aYeD0&start_radio=1"
+            },
 
 
-
-<script>
-
-
-    /* =====================================
-       COLLEAGUE DATA
-
-       Each person can have:
-
-       message
-       quote
-       song
-       songLink
-
-       Leave something as "" if they
-       don't have it.
-    ====================================== */
+            person2: {
+                name: "Lee Shin",
+                icon: "🌟",
+                message:
+                    "All the best Johnny! [Happy]",
+                quote: "",
+                song: "",
+                songLink: ""
+            },
 
 
-    const people = {
+            person3: {
+                name: "Marie",
+                icon: "🌷",
+                message:
+                    "Wishing you a smooth transition and great success in your new job!",
+                quote: "",
+                song: "",
+                songLink: ""
+            },
 
 
-        /* =========================
-           PERSON 1
-           PHILBERT
-        ========================== */
-
-        person1: {
-
-            name: "Your Love Pig Dom 🐷",
-
-            message: "",
-
-            quote: "I’ll always love you",
-
-            song: "Beautiful in White by Westlife",
-
-            songLink:
-                "https://www.youtube.com/watch?v=XRuDQ6aYeD0&list=RDXRuDQ6aYeD0&start_radio=1"
-
-        },
+            person4: {
+                name: "Brandon",
+                icon: "🎸",
+                message:
+                    "All the best for your future! Thank you for giving me the opportunity for my first job. Wishing you success in your next chapter!",
+                quote: "",
+                song: "See You Again",
+                songLink:
+                    "https://youtu.be/RgKAFK5djSk?si=toFEuWRGpd3B0hPL"
+            },
 
 
-        /* =========================
-           PERSON 2
-           LEE SHIN
-        ========================== */
+            person5: {
+                name: "Janice",
+                icon: "🌸",
+                message:
+                    "Thanks a lot for your guidance and support during my time here. Wishing you all the best in your next chapter — may it be your best one yet! 😊",
+                quote: "",
+                song: "Good Life",
+                songLink:
+                    "https://www.youtube.com/watch?v=jZhQOvvV45w&list=RDjZhQOvvV45w&start_radio=1"
+            }
 
-        person2: {
-
-            name: "Lee Shin",
-
-            message: "All the best Johnny! [Happy]",
-
-            quote: "",
-
-            song: "",
-
-            songLink: ""
-
-        },
-
-
-        /* =========================
-           PERSON 3
-           MARIE
-        ========================== */
-
-        person3: {
-
-            name: "Marie",
-
-            message:
-                "Wishing you a smooth transition and great success in your new job!",
-
-            quote: "",
-
-            song: "",
-
-            songLink: ""
-
-        },
+        };
 
 
         /* =========================
-           PERSON 4
-           BRANDON
-        ========================== */
+           CHECK URL
+        ========================= */
 
-        person4: {
+        const params =
+            new URLSearchParams(
+                window.location.search
+            );
 
-            name: "Brandon",
-
-            message:
-                "All the best for your future! Thank you for giving me the opportunity for my first job. Wishing you success in your next chapter!",
-
-            quote: "",
-
-            song: "See You Again",
-
-            songLink:
-                "https://youtu.be/RgKAFK5djSk?si=toFEuWRGpd3B0hPL"
-
-        },
+        const personID =
+            params.get("person");
 
 
         /* =========================
-           PERSON 5
-           JANICE
-        ========================== */
-
-        person5: {
-
-            name: "Janice",
-
-            message:
-                "Thanks a lot for your guidance and support during my time here. Wishing you all the best in your next chapter — may it be your best one yet! 😊",
-
-            quote: "",
-
-            song: "Good Life",
-
-            songLink:
-                "https://www.youtube.com/watch?v=jZhQOvvV45w&list=RDjZhQOvvV45w&start_radio=1"
-
-        }
-
-
-    };
-
-
-
-    /* =====================================
-       READ PERSON FROM URL
-
-       Example:
-
-       ?person=person1
-    ====================================== */
-
-
-    const params =
-        new URLSearchParams(
-            window.location.search
-        );
-
-
-    const personID =
-        params.get("person");
-
-
-
-    /* =====================================
-       SHOW PERSON PAGE
-    ====================================== */
-
-
-    if (
-        personID &&
-        people[personID]
-    ) {
-
-
-        const person =
-            people[personID];
-
-
-
-        /* Hide homepage */
-
-        document
-            .getElementById("homePage")
-            .classList
-            .add("hidden");
-
-
-
-        /* Show person's page */
-
-        document
-            .getElementById("personPage")
-            .classList
-            .remove("hidden");
-
-
-
-        /* Name */
-
-        document
-            .getElementById("personName")
-            .textContent =
-            person.name;
-
-
-
-        /* =========================
-           MESSAGE
-        ========================== */
-
-        const messageBox =
-            document.getElementById("messageBox");
-
-
-        if (person.message) {
-
-            messageBox
-                .classList
-                .remove("hidden");
-
-            document
-                .getElementById("personMessage")
-                .textContent =
-                person.message;
-
-        }
-
-
-
-        /* =========================
-           QUOTE
-        ========================== */
-
-        const quoteBox =
-            document.getElementById("quoteBox");
-
-
-        if (person.quote) {
-
-            quoteBox
-                .classList
-                .remove("hidden");
-
-            document
-                .getElementById("personQuote")
-                .textContent =
-                person.quote;
-
-        }
-
-
-
-        /* =========================
-           SONG
-        ========================== */
-
-        const songBox =
-            document.getElementById("songBox");
-
+           SHOW PERSON PAGE
+        ========================= */
 
         if (
-            person.song &&
-            person.songLink
+            personID &&
+            people[personID]
         ) {
 
-            songBox
+            const person =
+                people[personID];
+
+
+            /* Hide homepage */
+
+            document
+                .getElementById("homePage")
+                .classList
+                .add("hidden");
+
+
+            /* Show person page */
+
+            document
+                .getElementById("personPage")
                 .classList
                 .remove("hidden");
 
 
+            /* Name */
+
             document
-                .getElementById("songTitle")
+                .getElementById("personName")
                 .textContent =
-                person.song;
+                person.name;
 
 
-            document
-                .getElementById("songLink")
-                .href =
-                person.songLink;
+            /* Icon */
+
+            if (person.icon) {
+
+                document
+                    .getElementById("personIcon")
+                    .textContent =
+                    person.icon;
+
+            }
+
+
+            /* Message */
+
+            const messageBox =
+                document
+                    .getElementById("messageBox");
+
+            if (person.message) {
+
+                messageBox
+                    .classList
+                    .remove("hidden");
+
+                document
+                    .getElementById("personMessage")
+                    .textContent =
+                    person.message;
+
+            }
+
+
+            /* Quote */
+
+            const quoteBox =
+                document
+                    .getElementById("quoteBox");
+
+            if (person.quote) {
+
+                quoteBox
+                    .classList
+                    .remove("hidden");
+
+                document
+                    .getElementById("personQuote")
+                    .textContent =
+                    person.quote;
+
+            }
+
+
+            /* Song */
+
+            const songBox =
+                document
+                    .getElementById("songBox");
+
+            if (
+                person.song &&
+                person.songLink
+            ) {
+
+                songBox
+                    .classList
+                    .remove("hidden");
+
+                document
+                    .getElementById("songTitle")
+                    .textContent =
+                    person.song;
+
+                document
+                    .getElementById("songLink")
+                    .href =
+                    person.songLink;
+
+            }
 
         }
 
-    }
-
-</script>
-
+    </script>
 
 </body>
-
 </html>
