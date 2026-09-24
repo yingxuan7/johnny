@@ -12,6 +12,10 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
             padding: 0;
@@ -51,6 +55,7 @@
             font-size: 35px;
             pointer-events: none;
             user-select: none;
+            z-index: 0;
         }
 
         .doodle.star1 {
@@ -98,6 +103,8 @@
             box-shadow: 4px 4px 0 #222;
             transform: rotate(-2deg);
             margin-bottom: 25px;
+            position: relative;
+            z-index: 1;
         }
 
         .hand {
@@ -105,6 +112,8 @@
             display: block;
             margin-bottom: 10px;
             animation: wave 1.5s infinite;
+            position: relative;
+            z-index: 1;
         }
 
         @keyframes wave {
@@ -132,6 +141,8 @@
             margin: 10px 0 20px;
             color: #222;
             letter-spacing: -2px;
+            position: relative;
+            z-index: 1;
         }
 
         .subtitle {
@@ -139,6 +150,8 @@
             line-height: 1.6;
             max-width: 600px;
             margin: auto;
+            position: relative;
+            z-index: 1;
         }
 
         .button {
@@ -154,11 +167,19 @@
             font-size: 18px;
             box-shadow: 5px 5px 0 #222;
             transition: 0.2s;
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
         }
 
         .button:hover {
             transform: translate(3px, 3px);
             box-shadow: 2px 2px 0 #222;
+        }
+
+        .button:active {
+            transform: translate(5px, 5px);
+            box-shadow: 0 0 0 #222;
         }
 
         .note {
@@ -171,10 +192,166 @@
             box-shadow: 6px 6px 0 #222;
             transform: rotate(1deg);
             font-size: 16px;
+            position: relative;
+            z-index: 1;
         }
 
         .note strong {
             font-size: 20px;
+        }
+
+        .next-button {
+            margin-top: 35px;
+        }
+
+        /* =========================
+           PEOPLE PAGE
+        ========================= */
+
+        .people-page {
+            min-height: 100vh;
+            padding: 45px 18px 70px;
+            position: relative;
+        }
+
+        .people-container {
+            width: 100%;
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .people-title {
+            font-size: clamp(34px, 8vw, 55px);
+            line-height: 1;
+            margin: 10px 0 15px;
+            color: #222;
+        }
+
+        .people-subtitle {
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 0 auto 35px;
+            max-width: 600px;
+        }
+
+        .people-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .person-choice {
+            background: #fff;
+            border: 3px solid #222;
+            border-radius: 18px;
+            padding: 20px 12px;
+            min-height: 155px;
+            box-shadow: 5px 5px 0 #222;
+            cursor: pointer;
+            transition: 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .person-choice:hover {
+            transform: translate(3px, 3px) rotate(-1deg);
+            box-shadow: 2px 2px 0 #222;
+        }
+
+        .person-choice:active {
+            transform: translate(5px, 5px);
+            box-shadow: 0 0 0 #222;
+        }
+
+        .choice-icon {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: #ffd9e4;
+            border: 3px solid #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 34px;
+            margin-bottom: 12px;
+        }
+
+        .choice-name {
+            font-size: 17px;
+            font-weight: bold;
+            color: #222;
+            line-height: 1.2;
+        }
+
+        .choice-number {
+            font-size: 12px;
+            color: #777;
+            margin-top: 5px;
+        }
+
+        .people-back {
+            margin-top: 40px;
+        }
+
+        /* Different little rotations */
+
+        .person-choice:nth-child(1) {
+            transform: rotate(-1deg);
+        }
+
+        .person-choice:nth-child(2) {
+            transform: rotate(1deg);
+        }
+
+        .person-choice:nth-child(3) {
+            transform: rotate(-1deg);
+        }
+
+        .person-choice:nth-child(4) {
+            transform: rotate(1deg);
+        }
+
+        .person-choice:nth-child(5) {
+            transform: rotate(-1deg);
+        }
+
+        .person-choice:nth-child(6) {
+            transform: rotate(1deg);
+        }
+
+        .person-choice:nth-child(7) {
+            transform: rotate(-1deg);
+        }
+
+        .person-choice:nth-child(8) {
+            transform: rotate(1deg);
+        }
+
+        .person-choice:nth-child(9) {
+            transform: rotate(-1deg);
+        }
+
+        .person-choice:nth-child(10) {
+            transform: rotate(1deg);
+        }
+
+        .person-choice:nth-child(11) {
+            transform: rotate(-1deg);
+        }
+
+        .person-choice:nth-child(12) {
+            transform: rotate(1deg);
+        }
+
+        .person-choice:nth-child(13) {
+            transform: rotate(-1deg);
         }
 
         /* =========================
@@ -184,12 +361,15 @@
         .person-page {
             min-height: 100vh;
             padding: 35px 18px 60px;
+            position: relative;
         }
 
         .person-container {
             width: 100%;
             max-width: 680px;
             margin: auto;
+            position: relative;
+            z-index: 1;
         }
 
         .found-label {
@@ -369,6 +549,7 @@
             font-weight: bold;
             border-bottom: 2px solid #222;
             padding-bottom: 3px;
+            cursor: pointer;
         }
 
         .back-button:hover {
@@ -378,6 +559,19 @@
         /* =========================
            MOBILE
         ========================= */
+
+        @media (max-width: 700px) {
+
+            .people-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+
+            .person-choice {
+                min-height: 145px;
+            }
+
+        }
 
         @media (max-width: 600px) {
 
@@ -416,6 +610,34 @@
             .song-title {
                 font-size: 18px;
             }
+
+            .people-page {
+                padding: 30px 14px 60px;
+            }
+
+            .people-subtitle {
+                font-size: 16px;
+            }
+
+            .people-grid {
+                gap: 14px;
+            }
+
+            .person-choice {
+                min-height: 135px;
+                padding: 15px 8px;
+            }
+
+            .choice-icon {
+                width: 58px;
+                height: 58px;
+                font-size: 30px;
+            }
+
+            .choice-name {
+                font-size: 15px;
+            }
+
         }
 
     </style>
@@ -423,6 +645,7 @@
 
 
 <body>
+
 
     <!-- ==================================================
          HOME PAGE
@@ -454,11 +677,23 @@
                 saying goodbye? 👀
             </div>
 
-            <a href="#secret" class="button">
-                What is this? 👀
-            </a>
+            <!-- FIRST BUTTON -->
 
-            <div id="secret" class="note">
+            <button
+                id="revealButton"
+                class="button"
+                onclick="showSecret()"
+            >
+                What is this? 👀
+            </button>
+
+
+            <!-- SECRET NOTE -->
+
+            <div
+                id="secret"
+                class="note hidden"
+            >
 
                 <strong>
                     Don't worry...
@@ -480,6 +715,18 @@
                 the QR codes / NFC tags
                 you've received. 👀
 
+
+                <!-- NEXT BUTTON -->
+
+                <br>
+
+                <button
+                    class="button next-button"
+                    onclick="showPeople()"
+                >
+                    Okay... Show Me! 👀
+                </button>
+
             </div>
 
         </div>
@@ -487,11 +734,67 @@
     </div>
 
 
+
+    <!-- ==================================================
+         PEOPLE SELECTION PAGE
+    ================================================== -->
+
+    <div
+        id="peoplePage"
+        class="people-page hidden"
+    >
+
+        <div class="doodle star1">⭐</div>
+        <div class="doodle star2">✨</div>
+        <div class="doodle heart1">💕</div>
+        <div class="doodle heart2">🌸</div>
+
+        <div class="people-container">
+
+            <div class="announcement">
+                💌 SECRET MESSAGES INCOMING 💌
+            </div>
+
+            <h1 class="people-title">
+                Who's This From? 👀
+            </h1>
+
+            <div class="people-subtitle">
+                Pick a name and see what they prepared
+                for Johnny! ✨
+            </div>
+
+
+            <!-- PEOPLE WILL BE GENERATED HERE -->
+
+            <div
+                id="peopleGrid"
+                class="people-grid"
+            ></div>
+
+
+            <a
+                href="#"
+                class="back-button people-back"
+                onclick="showHome(); return false;"
+            >
+                ← Back to the beginning
+            </a>
+
+        </div>
+
+    </div>
+
+
+
     <!-- ==================================================
          PERSON PAGE
     ================================================== -->
 
-    <div id="personPage" class="person-page hidden">
+    <div
+        id="personPage"
+        class="person-page hidden"
+    >
 
         <div class="doodle star1">⭐</div>
         <div class="doodle star2">✨</div>
@@ -511,7 +814,10 @@
 
             <div class="person-card">
 
-                <div class="person-icon" id="personIcon">
+                <div
+                    class="person-icon"
+                    id="personIcon"
+                >
                     💌
                 </div>
 
@@ -619,11 +925,14 @@
             </div>
 
 
+            <!-- BACK TO PEOPLE -->
+
             <a
-                href="index.html"
+                href="#"
                 class="back-button"
+                onclick="showPeople(); return false;"
             >
-                ← Back to Johnny's page
+                ← Back to all messages
             </a>
 
         </div>
@@ -631,11 +940,17 @@
     </div>
 
 
+
     <!-- ==================================================
          DATA + JAVASCRIPT
     ================================================== -->
 
     <script>
+
+        /* =================================================
+           PEOPLE DATA
+           You can edit messages / songs / icons here later.
+           ================================================= */
 
         const people = {
 
@@ -654,7 +969,7 @@
                 name: "Lee Shin",
                 icon: "🌟",
                 message:
-                    "All the best Johnny! [Happy]",
+                    "All the best Johnny! 😄",
                 quote: "",
                 song: "",
                 songLink: ""
@@ -695,7 +1010,7 @@
                     "https://www.youtube.com/watch?v=jZhQOvvV45w&list=RDjZhQOvvV45w&start_radio=1"
             },
 
-            
+
             person6: {
                 name: "Chloe",
                 icon: "🌸",
@@ -707,128 +1022,310 @@
                     "https://www.youtube.com/watch?v=1e9B31FLT-s&list=RD1e9B31FLT-s&start_radio=1"
             },
 
+
             person7: {
                 name: "Diana",
                 icon: "🦋",
-                message:
-                    "",
+                message: "",
                 quote: "",
                 song: "",
-                songLink:
-                    ""
+                songLink: ""
             },
+
 
             person8: {
                 name: "Kent",
                 icon: "🧋",
-                message:
-                    "",
+                message: "",
                 quote: "",
                 song: "",
-                songLink:
-                    ""
+                songLink: ""
             },
+
 
             person9: {
                 name: "Hsin Hang",
                 icon: "💫",
-                message:
-                    "",
+                message: "",
                 quote: "",
                 song: "",
-                songLink:
-                    ""
+                songLink: ""
             },
+
 
             person10: {
                 name: "Aisyah",
                 icon: "🧁",
-                message:
-                    "",
+                message: "",
                 quote: "",
                 song: "",
-                songLink:
-                    ""
+                songLink: ""
             },
+
 
             person11: {
                 name: "Philbert",
                 icon: "🐰",
-                message:
-                    "",
+                message: "",
                 quote: "",
                 song: "",
-                songLink:
-                    ""
+                songLink: ""
             },
+
 
             person12: {
                 name: "Kok Wei",
                 icon: "🐹",
-                message:
-                    "",
+                message: "",
                 quote: "",
                 song: "",
-                songLink:
-                    ""
+                songLink: ""
             },
+
 
             person13: {
                 name: "Hui En",
                 icon: "☕",
-                message:
-                    "",
+                message: "",
                 quote: "",
                 song: "",
-                songLink:
-                    ""
-            },
+                songLink: ""
+            }
+
         };
 
 
-        /* =========================
-           CHECK URL
-        ========================= */
+        /* =================================================
+           PAGE ELEMENTS
+           ================================================= */
 
-        const params =
-            new URLSearchParams(
-                window.location.search
-            );
+        const homePage =
+            document.getElementById("homePage");
 
-        const personID =
-            params.get("person");
+        const peoplePage =
+            document.getElementById("peoplePage");
+
+        const personPage =
+            document.getElementById("personPage");
+
+        const peopleGrid =
+            document.getElementById("peopleGrid");
 
 
-        /* =========================
-           SHOW PERSON PAGE
-        ========================= */
+        /* =================================================
+           HIDE ALL PAGES
+           ================================================= */
 
-        if (
-            personID &&
-            people[personID]
-        ) {
+        function hideAllPages() {
+
+            homePage.classList.add("hidden");
+
+            peoplePage.classList.add("hidden");
+
+            personPage.classList.add("hidden");
+
+        }
+
+
+        /* =================================================
+           SHOW HOME PAGE
+           ================================================= */
+
+        function showHome() {
+
+            hideAllPages();
+
+            homePage.classList.remove("hidden");
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+
+        /* =================================================
+           SHOW SECRET NOTE
+           ================================================= */
+
+        function showSecret() {
+
+            const secret =
+                document.getElementById("secret");
+
+            secret.classList.remove("hidden");
+
+            setTimeout(function() {
+
+                secret.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+
+            }, 100);
+
+        }
+
+
+        /* =================================================
+           BUILD PEOPLE SELECTION GRID
+           ================================================= */
+
+        function buildPeopleGrid() {
+
+            peopleGrid.innerHTML = "";
+
+            Object.keys(people).forEach(function(personID) {
+
+                const person =
+                    people[personID];
+
+
+                const card =
+                    document.createElement("div");
+
+                card.className =
+                    "person-choice";
+
+
+                card.onclick =
+                    function() {
+
+                        openPerson(personID);
+
+                    };
+
+
+                const icon =
+                    document.createElement("div");
+
+                icon.className =
+                    "choice-icon";
+
+                icon.textContent =
+                    person.icon || "💌";
+
+
+                const name =
+                    document.createElement("div");
+
+                name.className =
+                    "choice-name";
+
+                name.textContent =
+                    person.name;
+
+
+                const number =
+                    document.createElement("div");
+
+                number.className =
+                    "choice-number";
+
+                number.textContent =
+                    "Message #" +
+                    personID.replace("person", "");
+
+
+                card.appendChild(icon);
+
+                card.appendChild(name);
+
+                card.appendChild(number);
+
+                peopleGrid.appendChild(card);
+
+            });
+
+        }
+
+
+        /* =================================================
+           SHOW PEOPLE PAGE
+           ================================================= */
+
+        function showPeople() {
+
+            hideAllPages();
+
+            buildPeopleGrid();
+
+            peoplePage.classList.remove("hidden");
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+
+        /* =================================================
+           OPEN PERSON PAGE
+           ================================================= */
+
+        function openPerson(personID) {
 
             const person =
                 people[personID];
 
 
-            /* Hide homepage */
+            if (!person) {
+
+                return;
+
+            }
+
+
+            hideAllPages();
+
+
+            /* Update URL
+
+               This keeps the QR/NFC links working.
+               Example:
+
+               ?person=person1
+               ?person=person2
+               etc.
+            */
+
+            const newURL =
+                window.location.pathname +
+                "?person=" +
+                personID;
+
+            window.history.pushState(
+                {},
+                "",
+                newURL
+            );
+
+
+            /* =========================
+               RESET OPTIONAL SECTIONS
+            ========================= */
 
             document
-                .getElementById("homePage")
+                .getElementById("messageBox")
+                .classList
+                .add("hidden");
+
+            document
+                .getElementById("quoteBox")
+                .classList
+                .add("hidden");
+
+            document
+                .getElementById("songBox")
                 .classList
                 .add("hidden");
 
 
-            /* Show person page */
-
-            document
-                .getElementById("personPage")
-                .classList
-                .remove("hidden");
-
-
-            /* Name */
+            /* =========================
+               NAME
+            ========================= */
 
             document
                 .getElementById("personName")
@@ -836,27 +1333,24 @@
                 person.name;
 
 
-            /* Icon */
+            /* =========================
+               ICON
+            ========================= */
 
-            if (person.icon) {
-
-                document
-                    .getElementById("personIcon")
-                    .textContent =
-                    person.icon;
-
-            }
+            document
+                .getElementById("personIcon")
+                .textContent =
+                person.icon || "💌";
 
 
-            /* Message */
-
-            const messageBox =
-                document
-                    .getElementById("messageBox");
+            /* =========================
+               MESSAGE
+            ========================= */
 
             if (person.message) {
 
-                messageBox
+                document
+                    .getElementById("messageBox")
                     .classList
                     .remove("hidden");
 
@@ -868,15 +1362,14 @@
             }
 
 
-            /* Quote */
-
-            const quoteBox =
-                document
-                    .getElementById("quoteBox");
+            /* =========================
+               QUOTE
+            ========================= */
 
             if (person.quote) {
 
-                quoteBox
+                document
+                    .getElementById("quoteBox")
                     .classList
                     .remove("hidden");
 
@@ -888,18 +1381,17 @@
             }
 
 
-            /* Song */
-
-            const songBox =
-                document
-                    .getElementById("songBox");
+            /* =========================
+               SONG
+            ========================= */
 
             if (
                 person.song &&
                 person.songLink
             ) {
 
-                songBox
+                document
+                    .getElementById("songBox")
                     .classList
                     .remove("hidden");
 
@@ -914,6 +1406,200 @@
                     person.songLink;
 
             }
+
+
+            /* =========================
+               SHOW PAGE
+            ========================= */
+
+            personPage.classList.remove("hidden");
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+
+        /* =================================================
+           CHECK URL WHEN PAGE LOADS
+           ================================================= */
+
+        const params =
+            new URLSearchParams(
+                window.location.search
+            );
+
+
+        const personID =
+            params.get("person");
+
+
+        /* =================================================
+           DIRECT QR / NFC ACCESS
+           ================================================= */
+
+        if (
+            personID &&
+            people[personID]
+        ) {
+
+            openPerson(personID);
+
+        } else {
+
+            showHome();
+
+        }
+
+
+        /* =================================================
+           BROWSER BACK / FORWARD BUTTON
+           ================================================= */
+
+        window.addEventListener(
+            "popstate",
+            function() {
+
+                const currentParams =
+                    new URLSearchParams(
+                        window.location.search
+                    );
+
+                const currentPerson =
+                    currentParams.get("person");
+
+
+                if (
+                    currentPerson &&
+                    people[currentPerson]
+                ) {
+
+                    openPersonWithoutChangingURL(
+                        currentPerson
+                    );
+
+                } else {
+
+                    showHome();
+
+                }
+
+            }
+        );
+
+
+        /* =================================================
+           OPEN PERSON WITHOUT CHANGING URL
+           Used for browser back/forward.
+           ================================================= */
+
+        function openPersonWithoutChangingURL(personID) {
+
+            const person =
+                people[personID];
+
+
+            if (!person) {
+
+                showHome();
+
+                return;
+
+            }
+
+
+            hideAllPages();
+
+
+            document
+                .getElementById("messageBox")
+                .classList
+                .add("hidden");
+
+            document
+                .getElementById("quoteBox")
+                .classList
+                .add("hidden");
+
+            document
+                .getElementById("songBox")
+                .classList
+                .add("hidden");
+
+
+            document
+                .getElementById("personName")
+                .textContent =
+                person.name;
+
+
+            document
+                .getElementById("personIcon")
+                .textContent =
+                person.icon || "💌";
+
+
+            if (person.message) {
+
+                document
+                    .getElementById("messageBox")
+                    .classList
+                    .remove("hidden");
+
+                document
+                    .getElementById("personMessage")
+                    .textContent =
+                    person.message;
+
+            }
+
+
+            if (person.quote) {
+
+                document
+                    .getElementById("quoteBox")
+                    .classList
+                    .remove("hidden");
+
+                document
+                    .getElementById("personQuote")
+                    .textContent =
+                    person.quote;
+
+            }
+
+
+            if (
+                person.song &&
+                person.songLink
+            ) {
+
+                document
+                    .getElementById("songBox")
+                    .classList
+                    .remove("hidden");
+
+                document
+                    .getElementById("songTitle")
+                    .textContent =
+                    person.song;
+
+                document
+                    .getElementById("songLink")
+                    .href =
+                    person.songLink;
+
+            }
+
+
+            personPage.classList.remove("hidden");
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
 
         }
 
